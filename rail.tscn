@@ -10,7 +10,7 @@ _data = {
 }
 point_count = 12
 
-[node name="Path3D" type="Path3D"]
+[node name="Rail" type="Path3D"]
 curve = SubResource("Curve3D_55bda")
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]

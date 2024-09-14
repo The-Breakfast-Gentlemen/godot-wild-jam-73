@@ -10,7 +10,7 @@ transform = Transform3D(0.611263, 0, 0.7914, 0, 0.999957, 0, -0.791388, 0, 0.611
 
 [node name="RemoteTransform3D" type="RemoteTransform3D" parent="Player"]
 
-[node name="Path3D" parent="." instance=ExtResource("2_m0hf4")]
+[node name="Rail" parent="." instance=ExtResource("2_m0hf4")]
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
 transform = Transform3D(0.680202, -0.729427, -4.99133, -3.40408, 3.65043, -0.997366, 3.72259, 3.47137, -2.18178e-07, 0, 0.0769299, 0)
