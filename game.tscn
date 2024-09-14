@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://d06upcpiheyn4"]
+
+[sub_resource type="Curve3D" id="Curve3D_nry64"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 4.29153e-05, -0.387207, 0.600373, 0, 0, 0, 0, 0, 0, 0.0501723, 0.336066, -0.825949, 0, 0, 0, 0, 0, 0, -0.406497, 0.545083, -0.664566, 0, 0, 0, 0, 0, 0, -0.658356, 0.459021, -0.595268, 0, 0, 0, 0, 0, 0, -0.313082, 0.564033, 0.622512, 0, 0, 0, 0, 0, 0, 0.52557, 0.789814, 0.57032, 0, 0, 0, 0, 0, 0, 0.733318, 0.822398, -0.416975, 0, 0, 0, 0, 0, 0, 0.0245737, 1.14358, -0.525647, 0, 0, 0, 0, 0, 0, -0.583613, 1.32153, 0.417203, 0, 0, 0, 0, 0, 0, 0.298215, 1.55853, 0.793295, 0, 0, 0, 0, 0, 0, 0.795513, 1.65508, -0.218808),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 11
+
+[node name="Game" type="Node3D"]
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_nry64")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Path3D"]
+polygon = PackedVector2Array(-0.0390579, -0.00334379, -0.0394749, 0.0974406, 0.0530908, 0.0988331, 0.0482247, -0.00109974)
+mode = 2
+path_node = NodePath("")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
