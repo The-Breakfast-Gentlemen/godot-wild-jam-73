@@ -29,7 +29,7 @@ remote_path = NodePath("../../../Player")
 update_scale = false
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
-transform = Transform3D(3.11144, 2.41193e-05, 4.02828, 2.4795, 4.01151, -1.91518, -3.17477, 3.13303, 2.45216, 0.897385, 0.06, 1.2306)
+transform = Transform3D(3.11144, 2.4271e-05, 4.02828, 2.4795, 4.01151, -1.91518, -3.17477, 3.13302, 2.45216, 0.897388, 0.06, 1.2306)
 height = 4.04187
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
