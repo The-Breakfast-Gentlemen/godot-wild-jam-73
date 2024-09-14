@@ -1,6 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8knk50wyxi2v"]
-
-[ext_resource type="Script" path="res://player.gd" id="1_bex57"]
+[gd_scene load_steps=2 format=3 uid="uid://b8knk50wyxi2v"]
 
 [sub_resource type="Curve3D" id="Curve3D_55bda"]
 bake_interval = 0.01
@@ -26,15 +24,3 @@ path_local = false
 path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
-
-[node name="PathFollow3D" type="PathFollow3D" parent="."]
-transform = Transform3D(-0.993176, 0, 0.116369, 0, 0.999957, 0, -0.116367, 0, -0.993192, -2.53595, 0.06, -1.17465)
-v_offset = 0.06
-rotation_mode = 2
-script = ExtResource("1_bex57")
-move_speed = 2.0
-
-[node name="RemoteTransform3D" type="RemoteTransform3D" parent="PathFollow3D"]
-transform = Transform3D(-0.515038, 0, -0.857167, 0, 1, 0, 0.857167, 0, -0.515038, 0, 0, 0)
-remote_path = NodePath("../../../Player")
-update_scale = false
