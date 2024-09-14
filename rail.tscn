@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8knk50wyxi2v"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_bex57"]
+
+[sub_resource type="Curve3D" id="Curve3D_55bda"]
+bake_interval = 0.01
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.53595, 0, -1.17465, 0, 0, 0, 0, 0, 0, -2.7149, 0, 0.352664, -0.86978, 0, -0.528527, 0.86978, 0, 0.528527, -2.23262, 0, 3.37991, -1.09451, 0, 0.378708, 1.09451, 0, -0.378708, 0.876115, 0, 3.44649, -0.0587344, 0, 0.711975, 0.0587344, 0, -0.711975, 2.96971, 0, 1.57476, 0.00324631, 0, 0.546872, -0.00324631, 0, -0.546872, 2.85362, 0, -0.748792, 0.121802, 0, 0.283137, -0.121802, 0, -0.283137, 2.47368, 0, -2.81711, 0.587903, 0, 0.212389, -0.587903, 0, -0.212389, 1.59557, 0, -3.47465, 0.479701, 0, -0.0830863, -0.479701, 0, 0.0830863, -0.464431, 0, -3.69938, 0.349715, 0, -0.535319, -0.349715, 0, 0.535319, -2.03655, 0, -2.76856, 0, 0, 0, 0, 0, 0, -2.40277, 0, -2.06108, 0, 0, 0, 0, 0, 0, -2.53595, 0, -1.17465),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 12
+
+[node name="Path3D" type="Path3D"]
+curve = SubResource("Curve3D_55bda")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
+transform = Transform3D(0.999998, 0.00175339, 0.000761771, -0.00175157, 0.999996, -0.00237965, -0.000765945, 0.00237829, 0.999997, 0, -0.106507, 0)
+polygon = PackedVector2Array(-0.0390579, -0.00334379, -0.0394749, 0.0974406, 0.0530908, 0.0988331, 0.0482247, -0.00109974)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 1
+path_interval = 0.11
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="PathFollow3D" type="PathFollow3D" parent="."]
+transform = Transform3D(-0.993176, 0, 0.116369, 0, 0.999957, 0, -0.116367, 0, -0.993192, -2.53595, 0.06, -1.17465)
+v_offset = 0.06
+rotation_mode = 2
+script = ExtResource("1_bex57")
+move_speed = 2.0
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="PathFollow3D"]
+transform = Transform3D(-0.515038, 0, -0.857167, 0, 1, 0, 0.857167, 0, -0.515038, 0, 0, 0)
+remote_path = NodePath("../../../Player")
+update_scale = false
