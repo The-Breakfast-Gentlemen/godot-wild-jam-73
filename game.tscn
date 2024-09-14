@@ -10,6 +10,8 @@
 transform = Transform3D(0.611263, 0, 0.7914, 0, 0.999957, 0, -0.791388, 0, 0.611272, -2.53595, 0.06, -1.17465)
 
 [node name="RemoteTransform3D" type="RemoteTransform3D" parent="Player"]
+transform = Transform3D(0.86729, -0.487136, 0.102503, 0.487136, 0.788118, -0.376255, 0.102503, 0.376255, 0.920828, 0.195201, 0, 4.18754)
+remote_path = NodePath("../../CSGCylinder3D")
 update_scale = false
 
 [node name="Rail" parent="." instance=ExtResource("2_m0hf4")]
@@ -27,7 +29,8 @@ remote_path = NodePath("../../../Player")
 update_scale = false
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
-transform = Transform3D(0.680202, -0.729427, -4.99133, -3.40408, 3.65043, -0.997366, 3.72259, 3.47137, -2.18178e-07, 0, 0.0769299, 0)
+transform = Transform3D(3.11144, 2.41193e-05, 4.02828, 2.4795, 4.01151, -1.91518, -3.17477, 3.13303, 2.45216, 0.897385, 0.06, 1.2306)
+height = 4.04187
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.752852, 0.65819, 0, -0.65819, 0.752852, 0, 10.9369, 3.00134)
