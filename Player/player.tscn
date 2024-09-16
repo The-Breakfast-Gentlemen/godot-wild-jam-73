@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dhxjll2lwq5lj"]
 
-[ext_resource type="Texture2D" uid="uid://ohokvqcqskwf" path="res://icon.svg" id="1_lmp5d"]
+[ext_resource type="Texture2D" uid="uid://dcudnthxrxa16" path="res://Player/Art/player.png" id="1_qxd5j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k1305"]
 size = Vector3(0.088623, 0.110596, 0.0088501)
@@ -10,7 +10,8 @@ transform = Transform3D(-0.515016, 0, -0.857157, 0, 0.999957, 0, 0.857144, 0, -0
 
 [node name="Player_Vis" type="Sprite3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
-texture = ExtResource("1_lmp5d")
+flip_h = true
+texture = ExtResource("1_qxd5j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 7.45058e-07, 3.05939e-07, -1.49012e-07, 1, -3.6764e-07, 1.39698e-09, 2.63099e-08, 1.00002, -0.00695816, 0.00207533, 0.00918597)
