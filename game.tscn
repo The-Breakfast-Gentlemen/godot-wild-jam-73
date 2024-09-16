@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://d06upcpiheyn4"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_3f8tg"]
+[ext_resource type="PackedScene" uid="uid://dhxjll2lwq5lj" path="res://player.tscn" id="1_64o40"]
+[ext_resource type="PackedScene" uid="uid://b8knk50wyxi2v" path="res://rail.tscn" id="2_m0hf4"]
+
+[node name="Game" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_64o40")]
+transform = Transform3D(0.611263, 0, 0.7914, 0, 0.999957, 0, -0.791388, 0, 0.611272, -2.53595, 0.06, -1.17465)
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="Player"]
+transform = Transform3D(0.86729, -0.487136, 0.102503, 0.487136, 0.788118, -0.376255, 0.102503, 0.376255, 0.920828, 0.195201, 0, 4.18754)
+remote_path = NodePath("../../CSGCylinder3D")
+update_scale = false
+
+[node name="Rail" parent="." instance=ExtResource("2_m0hf4")]
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Rail"]
+transform = Transform3D(-0.993176, 0, 0.116369, 0, 0.999957, 0, -0.116367, 0, -0.993192, -2.53595, 0.06, -1.17465)
+v_offset = 0.06
+rotation_mode = 2
+script = ExtResource("1_3f8tg")
+move_speed = 2.0
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="Rail/PathFollow3D"]
+transform = Transform3D(-0.515038, 0, -0.857167, 0, 1, 0, 0.857167, 0, -0.515038, 0, 0, 0)
+remote_path = NodePath("../../../Player")
+update_scale = false
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(3.11144, 2.4271e-05, 4.02828, 2.4795, 4.01151, -1.91518, -3.17477, 3.13302, 2.45216, 0.897388, 0.06, 1.2306)
+height = 4.04187
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.752852, 0.65819, 0, -0.65819, 0.752852, 0, 10.9369, 3.00134)
