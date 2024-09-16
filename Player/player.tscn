@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dhxjll2lwq5lj"]
 
-[ext_resource type="Texture2D" uid="uid://dcudnthxrxa16" path="res://player.png" id="1_qxd5j"]
+[ext_resource type="Texture2D" uid="uid://dcudnthxrxa16" path="res://Player/Art/player.png" id="1_qxd5j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k1305"]
 size = Vector3(0.088623, 0.110596, 0.0088501)

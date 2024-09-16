@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://d06upcpiheyn4"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_3f8tg"]
-[ext_resource type="PackedScene" uid="uid://dhxjll2lwq5lj" path="res://player.tscn" id="1_64o40"]
-[ext_resource type="PackedScene" uid="uid://b8knk50wyxi2v" path="res://rail.tscn" id="2_m0hf4"]
-[ext_resource type="Texture2D" uid="uid://0brble0y24tj" path="res://tower pplaceholder_sonic background.png" id="4_lx60u"]
+[ext_resource type="Script" path="res://Player/Scripts/player.gd" id="1_3f8tg"]
+[ext_resource type="PackedScene" uid="uid://dhxjll2lwq5lj" path="res://Player/player.tscn" id="1_64o40"]
+[ext_resource type="PackedScene" uid="uid://b8knk50wyxi2v" path="res://Rail/rail.tscn" id="2_m0hf4"]
+[ext_resource type="Texture2D" uid="uid://0brble0y24tj" path="res://Tower/Art/tower pplaceholder_sonic background.png" id="4_lx60u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pamup"]
 albedo_texture = ExtResource("4_lx60u")
@@ -33,7 +33,7 @@ remote_path = NodePath("../../../Player")
 update_scale = false
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
-transform = Transform3D(3.11143, 2.54845e-05, 4.02828, 2.4795, 4.01151, -1.91518, -3.17477, 3.13302, 2.45216, 0.897388, 0.19, 1.2306)
+transform = Transform3D(3.11143, 2.56362e-05, 4.02828, 2.4795, 4.01151, -1.91518, -3.17477, 3.13302, 2.45216, 0.897388, 0.19, 1.2306)
 material_override = SubResource("StandardMaterial3D_pamup")
 height = 4.04187
 
