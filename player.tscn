@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhxjll2lwq5lj"]
+[gd_scene load_steps=3 format=3 uid="uid://cc837e8l2t53"]
 
 [ext_resource type="Texture2D" uid="uid://ohokvqcqskwf" path="res://icon.svg" id="1_lmp5d"]
 
@@ -10,6 +10,7 @@ transform = Transform3D(-0.515016, 0, -0.857157, 0, 0.999957, 0, 0.857144, 0, -0
 
 [node name="Player_Vis" type="Sprite3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+flip_h = true
 texture = ExtResource("1_lmp5d")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
