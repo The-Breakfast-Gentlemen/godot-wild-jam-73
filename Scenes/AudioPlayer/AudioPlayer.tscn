@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://2yu35spt1uh4"]
+
+[ext_resource type="AudioStream" uid="uid://b3d20fvlf7yri" path="res://Assets/Audio/GUI Sounds/JDSherbert - Ultimate UI SFX Pack - Select - 1.wav" id="1_kd16p"]
+[ext_resource type="Script" path="res://Scenes/AudioPlayer/AudioPlayer.gd" id="1_ucqtp"]
+[ext_resource type="AudioStream" uid="uid://b7feoluyf3w3k" path="res://Assets/Audio/GUI Sounds/JDSherbert - Ultimate UI SFX Pack - Cursor - 4.wav" id="3_74dmk"]
+[ext_resource type="AudioStream" uid="uid://b3jn71ovmkh7l" path="res://Assets/Audio/Music/Test.mp3" id="4_shwt1"]
+
+[node name="AudioPlayer" type="Node"]
+script = ExtResource("1_ucqtp")
+
+[node name="ButtonClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_kd16p")
+bus = &"SFX"
+
+[node name="ButtonHover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_74dmk")
+bus = &"SFX"
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_shwt1")
+volume_db = -20.493
+bus = &"Music"
